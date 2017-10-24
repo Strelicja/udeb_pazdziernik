@@ -117,5 +117,13 @@
 <!-- .content-area -->
 
 
-
+<!-- / -->
+<div class="centerer">
+    <a class="btn-11" href="#">
+      <span class='hexagon1'></span>
+      <span class='hexagon'></span>
+    </a>
+</div>
+<!-- <div class="hexagon"></div> -->
+<!-- / -->
     <?php get_footer(); ?>
