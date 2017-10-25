@@ -12,21 +12,21 @@ get_header(); ?>
 
 	<div id="primary" class="content-area ">
 		<main id="main" class="site-main">
-			<div class="row timeOpenBox">
+			<div class="row timeOpenBox ">
 
 				<div class="">
 		<!-- o firmie-->
-					<div class="tabsBox col-lg-12 col-md-12 col-sm-12 col-xs-12 sidebar_aboute ">
+					<div class="tabsBox  col-lg-12 col-md-12 col-sm-12 col-xs-12 sidebar_aboute ">
 							<?php
 								$wpb_all_query = new WP_Query(array(
 									'post_type'=>'post',
 									'post_status'=>'publish',
-									'cat' => '6',
+									'cat' => '11',
 									'posts_per_page'=>99
 								));
 							?>
 							<?php if ( $wpb_all_query->have_posts() ) : ?>
-							<div class="tabsList ">
+							<div class="tabsList visible-lg visible-md visible-sm ">
 								<div class="tabsList col-lg-12 col-md-12 col-sm-12 col-xs-12">
 									<ul>
 										<?php while ( $wpb_all_query->have_posts() ) : $wpb_all_query->the_post();?>
@@ -48,10 +48,29 @@ get_header(); ?>
 										<!-- end of the loop -->
 								</div>
 							</div>
-							    <?php wp_reset_postdata(); ?>
 
+              <!--mobile-->
+
+              <div class="tabsList  visible-xs">
+								<div class="tabsList col-lg-12 col-md-12 col-sm-12 col-xs-12">
+									<ul>
+										<?php while ( $wpb_all_query->have_posts() ) : $wpb_all_query->the_post();?>
+												<li class="tabsListTitle"><?php the_title(); ?></li>
+                        <div class="tabsListContent">
+  												<p class="tabsImg"><?php  the_post_thumbnail('thumbnail');?></p>
+  												<div class="tabsContent"><?php the_content(); ?></div>
+                        </div>
+										<?php endwhile; ?>
+									</ul>
+										<!-- end of the loop -->
+								</div>
+
+							</div>
+
+
+							    <?php wp_reset_postdata(); ?>
 							<?php else : ?>
-							    <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+
 							<?php endif; ?>
 						</div>
 					</div>

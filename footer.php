@@ -13,7 +13,8 @@
 ?>
 
 	</div><!-- #conten t -->
-
+	<div class="borderHeader container-fluid">
+	</div>
 	<footer id="colophon" class="container-fluid main_width site-footer">
 		<div class="site-info">
 			<div class="footer_boxes ">
@@ -26,7 +27,7 @@
 
 			</div>
 
-			<div class=" footerBox borderBottom col-lg-12 col-md-12 col-sm-12 col-xs-12">
+			<div class=" footerBox borderBottom col-lg-12 col-md-12 col-sm-12 col-xs-12"> 
 
 				<?php
 					/* translators: 1: Theme name, 2: Theme author. */

@@ -91,6 +91,8 @@ gtag(‘js’, new Date()); gtag(‘config’, ‘UA-106776295-1’);
         </div>
 
       </div>
-        </div>
+    </div>
+    <div class="borderHeader container-fluid">
 
-            <div id="content" class="site-content main_width container-fluid">
+    </div>
+    <div id="content" class="site-content main_width container-fluid">
