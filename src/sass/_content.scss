@@ -341,7 +341,7 @@ button .menu-toggle {
   z-index: 1;
 }
 .arrowsDown::after {
-    content: '↓';
+    content: 'â†“';
     position: absolute;
     padding: 38px 20%;
     z-index: 3;
@@ -354,7 +354,7 @@ button .menu-toggle {
 
   }
 .arrowsUp::after {
-    content: '↑';
+    content: 'â†‘';
     position: absolute;
     padding: 38px 20%;
     z-index: 3;
@@ -403,16 +403,14 @@ button .menu-toggle {
   margin-bottom: 0;
   z-index: 999;
   .nav li a {
-    // border: 1px solid #ccc;
+
     border-radius: 0;
     //
     display: flex;
     justify-content: center;
     align-items: center;
-    // padding: 0;
   }
     ul.sub-menu li a {
-      // border: 1px solid  #f1f1f1;
       background-color: white;
     }
 }
@@ -1000,19 +998,9 @@ h2.widget-title {
 .tabsBox {
   margin-top: 100px;
   display: flex;
-  @include when-xs {
-    display: block;
-  }
-  // @include when-sm {
-  //   display: block;
-  // }
-  // @include when-md {
-  //   display: block;
-  // }
-  // @include when-lg {
-  //   display: block;
-  // }
-
+    @include when-xs {
+      display: block;
+    }
 }
 // .borderLeft2 {
 //   margin-top: 0;
@@ -1054,13 +1042,13 @@ h2.widget-title {
   margin-bottom: 0.5%;
 }
 .arrowDown::after {
-  content: '↓';
+  content: 'â†“';
   float: right;
   padding-right: 23px;
   margin-top: -3px;
 }
 .arrowUp::after {
-  content: '↑';
+  content: 'â†‘';
   float: right;
   padding-right: 23px;
   margin-top: -3px;

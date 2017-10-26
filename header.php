@@ -94,9 +94,17 @@ gtag(‘js’, new Date()); gtag(‘config’, ‘UA-106776295-1’);
         </div>
 
       </div>
+<<<<<<< HEAD
         </div>
         <!-- <div class="borderHeader container-fluid">
 
         </div> -->
         </div>
             <div id="content" class=" site-content main_width container-fluid">
+=======
+    </div>
+    <div class="borderHeader container-fluid">
+
+    </div>
+    <div id="content" class="site-content main_width container-fluid">
+>>>>>>> e390b1d5863b5822ebdb789a2cb47188cc10e5d5
