@@ -21,7 +21,7 @@ get_header(); ?>
 			</div>
 			<div class="row">
 				<div class="noPadding col-lg-12 col-md-12 col-sm-12 col-xs-12">
-					<div class="sidebar_contact col-lg-8 col-md-8 col-sm-8 col-xs-12">
+					<div class="  sidebar_contact1 col-lg-8 col-md-8 col-sm-8 col-xs-12">
 						<?php
 						while ( have_posts() ) : the_post();
 							get_template_part( 'template-parts/content', 'page' );
@@ -37,7 +37,7 @@ get_header(); ?>
 		                <div class="borderLeft">
 
 		               <?php dynamic_sidebar('contactform'); ?>
-		               
+
 		               </div>
 		             </div>
 

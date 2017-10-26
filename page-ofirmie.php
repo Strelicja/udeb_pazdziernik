@@ -26,7 +26,7 @@ get_header(); ?>
 								));
 							?>
 							<?php if ( $wpb_all_query->have_posts() ) : ?>
-							<div class="tabsList ">
+							<div class="tabsList visible-lg visible-md visible-sm ">
 								<div class="tabsList col-lg-12 col-md-12 col-sm-12 col-xs-12">
 									<ul>
 										<?php while ( $wpb_all_query->have_posts() ) : $wpb_all_query->the_post();?>
@@ -48,6 +48,23 @@ get_header(); ?>
 										<!-- end of the loop -->
 								</div>
 							</div>
+							<!--mobile-->
+
+						<div class="tabsList  visible-xs">
+							<div class="tabsList col-lg-12 col-md-12 col-sm-12 col-xs-12">
+								<ul>
+									<?php while ( $wpb_all_query->have_posts() ) : $wpb_all_query->the_post();?>
+											<li class=" tabsListTitleMobile"><?php the_title(); ?></li>
+											<div class=" tabsListContentMobile">
+												<p class="tabsImg"><?php  the_post_thumbnail('thumbnail');?></p>
+												<div class="tabsContent"><?php the_content(); ?></div>
+											</div>
+									<?php endwhile; ?>
+								</ul>
+									<!-- end of the loop -->
+							</div>
+
+						</div>
 							    <?php wp_reset_postdata(); ?>
 
 							<?php else : ?>

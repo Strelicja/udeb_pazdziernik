@@ -31,6 +31,9 @@ gtag(‘js’, new Date()); gtag(‘config’, ‘UA-106776295-1’);
     </head>
 
     <body <?php body_class(); ?>>
+      <div class="borderHeader container-fluid ">
+
+
         <div id="page" class="site container-fluid main_width">
             <div class="row">
 <!--header_box-->
@@ -38,10 +41,10 @@ gtag(‘js’, new Date()); gtag(‘config’, ‘UA-106776295-1’);
       <!-- site-branding -->
                 <div class="site-branding main_width col-lg-12 col-md-12 col-sm-12 col-xs-12">
            <!-- logo -->
-                    <div class="visible-xs visible-sm noPadding logo  col-lg-6 col-md-6 col-sm-10 col-xs-10">
-                      <img src="images/logo.png" />
+                    <div class="visible-xs  imgLogoMobile noPadding logo  col-lg-6 col-md-6 col-sm-10 col-xs-10">
+                      <!-- <img src="../images/logo2.jpg" /> -->
                     </div>
-                    <div class="visible-lg visible-md noPadding logo col-lg-6 col-md-6 col-sm-10 col-xs-10">
+                    <div class="visible-lg visible-md visible-sm noPadding logo col-lg-6 col-md-6 col-sm-10 col-xs-10">
                       <?php
                 			the_custom_logo();
                 			if ( is_front_page() && is_home() ) : ?>
@@ -92,5 +95,8 @@ gtag(‘js’, new Date()); gtag(‘config’, ‘UA-106776295-1’);
 
       </div>
         </div>
+        <!-- <div class="borderHeader container-fluid">
 
-            <div id="content" class="site-content main_width container-fluid">
+        </div> -->
+        </div>
+            <div id="content" class=" site-content main_width container-fluid">

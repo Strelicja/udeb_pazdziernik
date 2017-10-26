@@ -13,6 +13,8 @@
 ?>
 
 	</div><!-- #conten t -->
+	<div class="borderFooter container-fluid">
+
 
 	<footer id="colophon" class="container-fluid main_width site-footer">
 		<div class="site-info">
@@ -26,7 +28,7 @@
 
 			</div>
 
-			<div class=" footerBox borderBottom col-lg-12 col-md-12 col-sm-12 col-xs-12">
+			<div class=" footerBox  col-lg-12 col-md-12 col-sm-12 col-xs-12">
 
 				<?php
 					/* translators: 1: Theme name, 2: Theme author. */
@@ -41,6 +43,7 @@
 			</div>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
+	  </div>
 </div><!-- #page -->
 
 <?php wp_footer(); ?>

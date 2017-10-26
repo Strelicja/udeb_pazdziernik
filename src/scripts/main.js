@@ -11,7 +11,7 @@ $('.tabsListTitle').each(function (index, item) {
 $('.tabsListContent').each(function (index, item) {
 
         $(this).attr('rel', index+1);
-          if (index+1 == 1) {
+          if (index+1 == 1)  {
             $('.tabsListContent').hide();
             //  $(this).addClass('nowa2');
              $(this).show();
@@ -32,11 +32,42 @@ $(".tabsListTitle").on("click", function(){
       }
     });
 });
+//Persons Tabs Mobile
+$('.tabsListTitleMobile').each(function (index, item) {
+        $(this).attr('rel', index+1);
+          if (index+1 == 1) {
+             $(this).addClass('nowa');
+          }
+    });
+$('.tabsListContentMobile').each(function (index, item) {
+
+        $(this).attr('rel', index+1);
+          if (index+1 == 1)  {
+            $('.tabsListContentMobile').hide();
+            //  $(this).addClass('nowa2');
+             $(this).show();
+          }
+    });
+
+$(".tabsListTitleMobile").on("click", function(){
+  var rell = $(this).attr('rel');
+    $(".tabsListTitleMobile").removeClass("nowa");
+     liClass = $(this).addClass("nowa");
+
+    $('.tabsListContentMobile').each(function (index, item) {
+      var divy = $(this).attr('rel');
+      if (divy == rell) {
+        $('.tabsListContentMobile').hide();
+        // $(this).addClass('nowa2');
+        $(this).show();
+      }
+    });
+});
 //Acordion faq
 
 $(".acordionBox").on("click", function() {
 var display = $(this).next().css("display");
-console.log(display);
+// console.log(display);
     $(this).next().addClass('showAcordion').slideToggle('slow');
     $(this).addClass('colorAcordion arrowUp').removeClass('arrowDown');
 
@@ -47,7 +78,7 @@ console.log(display);
       $(this).removeClass('arrowUp').addClass(' arrowDown');
 
     }
-console.log(this);
+// console.log(this);
 
 });
 
@@ -100,23 +131,6 @@ $('.nav>li:nth-child(2)>a').on("touchstart",function(e) {
  	});
  });
 
- // /
- $(function() {
-  $('.btn-6')
-    .on('mouseenter', function(e) {
-			var parentOffset = $(this).offset(),
-      		relX = e.pageX - parentOffset.left,
-      		relY = e.pageY - parentOffset.top;
-			$(this).find('span').css({top:relY, left:relX})
-    })
-    .on('mouseout', function(e) {
-			var parentOffset = $(this).offset(),
-      		relX = e.pageX - parentOffset.left,
-      		relY = e.pageY - parentOffset.top;
-    	$(this).find('span').css({top:relY, left:relX})
-    });
-  $('[href=#]').click(function(){return false});
-});
-// /
+
 
  });
