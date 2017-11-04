@@ -113,23 +113,23 @@ function udeb_pazdziernik_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
-    register_sidebar( array(
-        'name' => 'Stopka',
-        'id' => 'footer-sidebar',
-        'description' => 'Treść Stopki'
-    ) );
-    register_sidebar( array(
-        'name' => 'Społeczności',
-        'id' => 'social-sidebar',
-        'description' => 'Strona główna społeczności'
-    ) );
-		register_sidebar( array(
-        'name' => 'Społeczności Front',
-        'id' => 'social-sidebar-front',
-        'description' => 'Wszystkie strony społeczności Facebook i Tweeter',
-				// 'before_widget' => '<a>',
-				// 'after_widget'  => '</a>',
-		) );
+    // register_sidebar( array(
+    //     'name' => 'Stopka',
+    //     'id' => 'footer-sidebar',
+    //     'description' => 'Treść Stopki'
+    // ) );
+    // register_sidebar( array(
+    //     'name' => 'Społeczności',
+    //     'id' => 'social-sidebar',
+    //     'description' => 'Strona główna społeczności'
+    // ) );
+		// register_sidebar( array(
+    //     'name' => 'Społeczności Front',
+    //     'id' => 'social-sidebar-front',
+    //     'description' => 'Wszystkie strony społeczności Facebook i Tweeter',
+		// 		// 'before_widget' => '<a>',
+		// 		// 'after_widget'  => '</a>',
+		// ) );
 		register_sidebar( array(
 			'name'          => 'Footer Sidebar', 'udeb' ,
 			'id'            => 'footer',
@@ -146,14 +146,14 @@ function udeb_pazdziernik_widgets_init() {
 			'before_title'  => '<h1 class="widget-title">',
 			'after_title'   => '</h1>',
 		) );
-		register_sidebar( array(
-			'name'          => 'AbouteImg Sidebar', 'udeb' ,
-			'id'            => 'abouteimg',
-			'before_widget' => '<section id="%1$s" class="col-lg-2 col-md-2 col-sm-3 col-xs-3 widget %2$s">',
-			'after_widget'  => '</section>',
-			'before_title'  => '<h4 class="widget-title">',
-			'after_title'   => '</h4>',
-		) );
+		// register_sidebar( array(
+		// 	'name'          => 'AbouteImg Sidebar', 'udeb' ,
+		// 	'id'            => 'abouteimg',
+		// 	'before_widget' => '<section id="%1$s" class="col-lg-2 col-md-2 col-sm-3 col-xs-3 widget %2$s">',
+		// 	'after_widget'  => '</section>',
+		// 	'before_title'  => '<h4 class="widget-title">',
+		// 	'after_title'   => '</h4>',
+		// ) );
 		register_sidebar( array(
 			'name'          => 'Contact Sidebar', 'udeb' ,
 			'id'            => 'contact',
@@ -170,14 +170,14 @@ function udeb_pazdziernik_widgets_init() {
 			'before_title'  => '<h6 class="widget-title_contact">',
 			'after_title'   => '</h6>',
 		) );
-		register_sidebar( array(
-			'name'          => 'TimeOpen Sidebar', 'udeb' ,
-			'id'            => 'timeopen',
-			'before_widget' => '<section id="%1$s" class=" widget %2$s">',
-			'after_widget'  => '</section>',
-			'before_title'  => '<h6 class="widget-title_contact">',
-			'after_title'   => '</h6>',
-		) );
+		// register_sidebar( array(
+		// 	'name'          => 'TimeOpen Sidebar', 'udeb' ,
+		// 	'id'            => 'timeopen',
+		// 	'before_widget' => '<section id="%1$s" class=" widget %2$s">',
+		// 	'after_widget'  => '</section>',
+		// 	'before_title'  => '<h6 class="widget-title_contact">',
+		// 	'after_title'   => '</h6>',
+		// ) );
 	}
 
 
@@ -200,10 +200,7 @@ function SearchFilter($query)
 
 add_filter('pre_get_posts','SearchFilter');
 
-function my_custom_post_types() {
-	register_post_type( 'products', array( 'public' => true, 'has_archive' => true, 'label' => 'Produkty', 'taxonomies' => array( 'category' ) ) );
-}
-add_action( 'init', 'my_custom_post_types' );
+
 
 
 //section shortcode

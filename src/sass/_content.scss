@@ -1,4 +1,3 @@
-
 @mixin when-xs() {
     @media (max-width: $screen-xs-max) {
         @content;
@@ -70,16 +69,17 @@ body {
 .articlePersons {
   @include when-xs {
     margin-top: 7%;
+    display: none;
   }
 }
 
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
-.borderHeader {
-  border-bottom: 1px solid #ccc;
-  height: 100px;
-}
+// .borderHeader {
+//   // border-bottom: 1px solid #dadade;
+//   // height: 100px;
+// }
 
 
 .nav-pills>li {
@@ -96,6 +96,9 @@ body {
   top: 100px;
 }
 .buttonHam {
+  // border: 0;
+  // border-radius: 0!important;
+  // background-color: none!important;
   color: #F6F6F6;
   // margin-top: -19px;
   z-index: 9999;
@@ -152,7 +155,7 @@ button .menu-toggle {
 }
 
 .main-navigation ul ul {
-	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+	// box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 	// float: left;
 	position: absolute;
 	top: 100%;
@@ -160,21 +163,21 @@ button .menu-toggle {
 	z-index: 99999;
   @include when-xs {
     top: 72%;
-    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+    // box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
   }
   @include when-sm {
     top: 72%;
-    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+    // box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
   }
   @include when-md {
     top: 100%;
     box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-    width: 299px;
+    width: 228px;
   }
   @include when-lg {
     top: 100%;
     box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-    width: 299px;
+    width: 228px;
   }
 }
 
@@ -191,6 +194,7 @@ button .menu-toggle {
 .main-navigation ul ul a {
 	width: 180px;
 }
+
 .navbar .nav li a {
   text-decoration: none;
   list-style: none;
@@ -224,12 +228,7 @@ button .menu-toggle {
 .main-navigation.toggled ul {
 	display: block;
   height: 100px;
-  // z-index: 999;
-  // color: #F6F6F6;
-  // // width: 100vw;
-  // text-align: center;
-  // margin-right: -16px;
-  // margin-top: -9px;
+
   li {
     width: 100vw;
   }
@@ -243,6 +242,7 @@ button .menu-toggle {
   // float: right;
   @include when-xs {
     display: block;
+    height: 47px;
   }
   @include when-sm {
     display: block;
@@ -272,17 +272,22 @@ button .menu-toggle {
 .nava {
   height: 100px;
   display: block;
+  @include when-xs {
+    	height: 50px;
+  }
+  // @include when-sm {
+  //   	height: 50px;
+  // }
 }
 .nava .navbar {
   height: 83px;
-
   @include when-xs {
       width: 3em;
-      // margin-top: 17px;
+      height: 43px;
   }
   @include when-sm {
       width: 3em;
-      // margin-top: 17px;
+      // height: 43px;
   }
   @include when-md {
       width: 100%;
@@ -299,22 +304,55 @@ button .menu-toggle {
   display: flex;
   justify-content: flex-end;
   margin-top: 1px;
+  @include when-xs {
+    margin-top: 0;
+  }
 
 }
 .main-navigation ul li:hover > ul,
 .main-navigation ul li.focus > ul {
 	left: 0;
 }
+.borderHeaderBox {
+  border-bottom: 1px solid #dadade;
+  animation: fadeIn 1s ease-in both;
+}
 .borderHeader {
   position: fixed;
   z-index: 999;
-  border-bottom: 1px solid silver;
+  // height: 100px;
+  width: 100%;
+  background-color: #F6F6F6;
+}
+.borderHeader2 {
+  position: fixed;
+  z-index: 0;
   height: 100px;
   width: 100%;
-    background-color: #F6F6F6;
+  background-color: #F6F6F6;
+  @include when-xs {
+    height: 51px;
+  }
+  @include when-sm {
+    height: 100px;
+  }
+  @include when-md {
+    height: 100px;
+  }
+  @include when-lg {
+    height: 100px;
+  }
 }
 .borderFooter {
-  border-top: 1px solid silver;
+  border-top: 1px solid #dadade;
+}
+.footer_boxes {
+  @include when-md {
+    padding-left: 0;
+  }
+  @include when-lg {
+    padding-left: 0;
+  }
 }
 .main-navigation.nav>ul>li {
 	position: relative;
@@ -341,7 +379,7 @@ button .menu-toggle {
   z-index: 1;
 }
 .arrowsDown::after {
-    content: 'â†“';
+    content: '↓';
     position: absolute;
     padding: 38px 20%;
     z-index: 3;
@@ -354,7 +392,7 @@ button .menu-toggle {
 
   }
 .arrowsUp::after {
-    content: 'â†‘';
+    content: '↑';
     position: absolute;
     padding: 38px 20%;
     z-index: 3;
@@ -368,6 +406,7 @@ button .menu-toggle {
 
 
 .marginLiSubmenu {
+  border-bottom: 1px solid #dadade;
   @include when-xs {
     	margin-top: 183px!important;
   }
@@ -388,29 +427,40 @@ button .menu-toggle {
 }
 .sub-menu {
   height: 200px !important;
-  margin-top: -1.5px!important;
+  margin-top: -2px!important;
   z-index: 999;
 }
 .navbar ul.sub-menu li a {
-  // text-align: left;
-  justify-content: center;
   margin-top: -1px;
   width: 100%;
   min-height: 4em;
-  // z-index: 1000;
+  @include when-xs {
+    justify-content: center;
+    }
+  @include when-sm {
+    justify-content: center;
+    }
+  @include when-md {
+    justify-content: left;
+    }
+  @include when-lg {
+    justify-content: left;
+    }
   }
 .navbar {
   margin-bottom: 0;
   z-index: 999;
   .nav li a {
-
+    // border: 1px solid #ccc;
     border-radius: 0;
     //
     display: flex;
     justify-content: center;
     align-items: center;
+    // padding: 0;
   }
     ul.sub-menu li a {
+      // border: 1px solid  #f1f1f1;
       background-color: white;
     }
 }
@@ -437,6 +487,12 @@ button .menu-toggle {
   -moz-transition: .25s ease-in-out;
   -o-transition: .25s ease-in-out;
   transition: .25s ease-in-out;
+  @include when-xs {
+      margin-top: 0.9em;
+  }
+  // @include when-sm {
+  //     margin-top: 0.9em;
+  // }
 }
 
 #nav-icon2 span:nth-child(even) {
@@ -520,6 +576,9 @@ button .menu-toggle {
 }
 .logo {
   height: 100px;
+  @include when-xs {
+    height: 50px;
+  }
 }
 .custom-logo-link {
 	margin-top: 3%;
@@ -527,22 +586,23 @@ button .menu-toggle {
 
 img.custom-logo {
   // width: 100%;
-  height: 100%;
-
+  // height: 100%;
+margin-top: 3% ;
+margin-left: 15px;
   @include when-xs {
     	padding: 2% ;
       width: 100%;
       height: 100%;
   }
-  @include when-sm {
-    padding:2%;
-  }
-  @include when-md {
-    padding: 3%;
-  }
-  @include when-lg {
-      padding: 3%;
-  }
+  // @include when-sm {
+  //   padding:2%;
+  // }
+  // @include when-md {
+  //   padding: 3% 3% 3% 0;
+  // }
+  // @include when-lg {
+  //     padding: 3% 3% 3% 0;
+  // }
 }
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main
@@ -550,16 +610,35 @@ img.custom-logo {
 	margin: 0 0 1.5em;
 	overflow: hidden;
 }
+.site-branding {
+  @include when-xs {
+    padding-left: 30px;
+  }
+  @include when-sm {
+    padding-left: 30px;
+  }
+  @include when-md {
+    padding: 0;
+  }
+  @include when-lg {
+    padding: 0;
+  }
+
+}
 /*--------------------------------------------------------------
 ## STR GLOWNA IMG
 --------------------------------------------------------------*/
 
 .imgHeader {
 	width: 100%;
+  height: 100%;
   margin-top: 100px;
   // border: 1px solid #ccc;
   margin-bottom: 3%;
   z-index: 1;
+  @include when-xs {
+    margin-top: 50px;
+  }
 }
 .article {
   display: flex;
@@ -596,13 +675,48 @@ h2.widget-title {
   color: #8c486a;
 }
 .textwidget>p>a,
-.button_homepage>a {
+.button_homepage>a{
 	padding: 0.5em;
 	font-size: 1em;
 	background-color: #9c5176;
 	color: white;
 	border-radius: 5px;
 
+
+}
+.hiddenEl {
+  @include when-xs {
+    display: block;
+  }
+  @include when-sm {
+    display: block;
+  }
+  @include when-md {
+    display: block;
+  }
+  @include when-lg {
+    display: block;
+  }
+
+}
+.button_homepage2 {
+  width: 100vw;
+  font-size: 1em;
+	background-color: #9c5176;
+	color: white;
+  height: 40px;
+  position: fixed;
+  bottom: 0;
+  margin-bottom: 0;
+  a {
+    height: 40px;
+    width: 100%;
+    display: block;
+    font-size: 1em;
+    color: white;
+    text-align: center;
+    padding: 0.7em;
+  }
 }
 .button_homepage {
   margin: 0;
@@ -624,7 +738,7 @@ h2.widget-title {
     width: 15em;
     // margin: 3%;
     border: 10px solid #fff;
-    box-shadow: 0 2px 10px -1px silver;
+    box-shadow: 0 2px 10px -1px #dadade;
     text-align: center;
     @include when-xs {
       display: inherit;
@@ -657,6 +771,7 @@ h2.widget-title {
 .sidebar_footer {
 	display: flex;
 	flex-wrap: wrap;
+  padding: 0;
   .widget_text>.widget-title {
     border-bottom: none;
   }
@@ -664,17 +779,23 @@ h2.widget-title {
     color: #9c5176;
     background-color: inherit;
     padding: 0;
+    @include when-xs {
+        float: right;
+      }
   }
   .button_homepage>a, .textwidget>p>a:hover {
     color: black;
   }
 }
 .borderBottom {
-  border-top: 1px solid silver;
+  border-top: 1px solid #dadade;
 }
 .footerBox {
-  padding: 3%;
-  border-top: 1px solid silver;
+  padding: 2em;
+  text-align: center;
+  @include when-xs {
+      margin-bottom: 40px;
+    }
 }
 .article_background .article_text>h3 {
   margin: 0;
@@ -687,18 +808,43 @@ h2.widget-title {
 --------------------------------------------------------------*/
 
 .widget_custom_html>.widget-title {
-	// border-bottom: 1px solid silver;
+	// border-bottom: 1px solid #dadade;
 	padding-bottom: 1%;
 }
 .timeOpenBox {
-	// border-bottom: 1px solid silver;
+	// border-bottom: 1px solid #dadade;
 	padding-top: 2em;
   position: relative;
-  margin-bottom: 4%;
+  margin-bottom: 2em;
 }
 .timeOpen {
   padding: 0;
   padding-right: 15px;
+.entry-content {
+  @include when-xs {
+    padding-left: 15px;
+  }
+  @include when-sm {
+    padding-left: 15px;
+  }
+  @include when-md {
+    padding-left: 0;
+  }
+  @include when-lg {
+    padding-left: 0;
+  }
+}
+
+}
+.widgetAboute {
+  @include when-xs {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  @include when-sm {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 .widgetAboute>.textwidget>p {
   font-size: 1em;
@@ -713,13 +859,26 @@ h2.widget-title {
   font-family: "Open sans", Helvetica, Arial, sans-serif;
   color:#6E6E6E;
   background-color: #F6F6F6;
-  h3 {
-      // border-bottom: 1px solid silver;
-      padding-bottom: 1%;
+  @include when-xs {
+    padding-left: 15px;
   }
-  p {
-    // margin-top: 10%;
-  } }
+  @include when-sm {
+    padding-left: 15px;
+  }
+  @include when-md {
+    padding-left: 0;
+  }
+  @include when-lg {
+    padding-left: 0;
+  }
+  h3 {
+    padding: 0.5em;
+    @include when-xs {
+      padding: 1em;
+    }
+
+  }
+ }
 
 
   .entry-content,
@@ -738,6 +897,7 @@ h2.widget-title {
       span {
         margin-bottom: 10%;
         display: inline-block;
+        margin-top: 20px;
         @include when-xs {
           margin-bottom: 5%;
           }
@@ -755,37 +915,102 @@ h2.widget-title {
     }
 
   }
-
+.sidebar_aboute {
+  @include when-md {
+    padding-left: 0;
+  }
+  @include when-lg {
+    padding-left: 0;
+  }
+}
 .borderTop {
-  // border-top: 1px solid silver;
   .widget_text {
     margin-top: 1%;
     margin-bottom: 2%;
   }
+
+}
+.sidebar_footer {
+  @include when-xs {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  @include when-sm {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+    @include when-md {
+  .widget_text:first-child {
+    padding-left: 0;
+  }
+}
+  @include when-lg {
+  .widget_text:last-child {
+    padding-right: 0;
+  }
+}
+}
+.page-template-page-szablon-kontakt >.button_homepage2 {
+  display: none!important;
+}
+.page-template-page-szablon-kontakt>footer {
+  .footerBox {
+  @include when-xs {
+      margin-bottom: 0!important;
+    }
+  }
 }
 .sidebar_contact1  {
+  margin-top: 20px;
   .textwidget {
     padding: 3%;
   }}
   .sidebar_contact {
+    .textwidget {
+      @include when-xs {
+        padding-left: 15px;
+        // display: none;
+      }
+      @include when-sm {
+        padding-left: 15px;
+      }
+    }
     padding:  0;
     .textwidget {
-      padding: 3%;
+        padding: 20px 20px 0 20px;
+
     }}
   iframe {
-    height: 300px;
-    padding-right: 3%;
-    margin-bottom: 4%;
+    height: 310px;
+    box-shadow: 0px 2px 10px -1px #dadade;
+    margin-bottom: 3%;
     @include when-xs {
-        padding-right: 15px;
+      padding: 0 ;
+    }
+    @include when-sm {
+      padding: 0;
+    }
+    @include when-sm {
+      padding: 0;
+     }
+    @include when-sm {
+      padding: 0;
       }
   }
   .sidebar_contact iframe {
-
     margin-top: 100px;
+    @include when-xs {
+        margin-top: 50px;
+      }
   }
   .textwidget>p {
     font-size: 1em;
+
+  }
+  .kontakt .textwidget {
+    @include when-xs {
+        display: block!important;
+      }
   }
   .textwidget {
     padding: 5% 10% 5% 0;
@@ -793,16 +1018,18 @@ h2.widget-title {
         // padding: 5% 0 5% 0;
         padding: 0;
       }
+
   }
   .widget_text>.widget-title {
     display: inline-block;
-    // border-bottom: 1px solid silver;
+    // border-bottom: 1px solid #dadade;
     padding-bottom: 1%;
   }
   .widget_text_adres {
     padding: 0 5%;
     @include when-xs {
         padding: 5% 0 0 0;
+        display: none;
       }
     @include when-sm {
         padding: 0 ;
@@ -811,18 +1038,47 @@ h2.widget-title {
         padding: 0 3%;
       }
   }
+  .contact_sidebar_show>.widget_text_adres {
+    @include when-xs {
+      display: block;
+    }
+  }
+    .widget_text_adres {
+      ul {
+      list-style: none;
+      padding-left: 0;
+      margin-bottom: 25px;
+    }
+
+
+    .textwidget>div {
+      display: flex;
+      .fa {
+        margin-top: 2px;
+        padding-right: 15px;
+      }
+    }
+  }
   .paddingRight {
     padding-right: 0;
-    // margin-top: 3%;
     padding-bottom: 2%;
+      @include when-xs {
+        padding-right: 15px;
+      }
+      @include when-sm {
+          padding-right: 15px;
+        }
   }
 
   /*--------------------------------------------------------------
   ## O FIRMIE
   --------------------------------------------------------------*/
   .noMargin p {
-    margin: 3% 0 0 0;
+    // margin: 2% 0 0 0;
     padding-right: 5%;
+      @include when-xs {
+        margin: 4% 0 0 0;
+      }
   }
   .sep:before {
       width: 60px;
@@ -867,7 +1123,7 @@ h2.widget-title {
   padding-left: 0;
   .tabsListTitle {
     display: inline-table;
-    border: 1px solid silver;
+    border: 1px solid #dadade;
     background-color: #f1f1f1;
     padding: 1.5% 4%;
     padding-bottom: 0;
@@ -894,7 +1150,7 @@ h2.widget-title {
   padding-left: 0;
   .tabsListTitleMobile {
     display: inline-table;
-    border: 1px solid silver;
+    border: 1px solid #dadade;
     background-color: #f1f1f1;
     padding: 1.5% 4%;
     padding-bottom: 0;
@@ -921,20 +1177,20 @@ h2.widget-title {
   margin-bottom: 1%;
 }
 .tabsListContentMobile {
-  border: 1px solid silver;
-  box-shadow: 0px 8px 9px -7px silver;
+  border: 1px solid #dadade;
+  box-shadow: 0px 8px 9px -7px #dadade;
   margin-top: -1px;
   background-color: white;
   padding: 1% 1.2% 1% 1%;
   position: relative;
-    display: block;
+    display: none;
 
   img {
     height: 15em;
     width: 15em;
     display: inline;
     border: 10px solid white;
-    box-shadow: 0px 2px 10px -1px silver;
+    box-shadow: 0px 2px 10px -1px #dadade;
   }
   p{
     margin: 2%;
@@ -944,8 +1200,8 @@ h2.widget-title {
   }
 }
 .tabsListContent {
-  border: 1px solid silver;
-  box-shadow: 0px 8px 9px -7px silver;
+  border: 1px solid #dadade;
+  box-shadow: 0px 8px 9px -7px #dadade;
   margin-top: -1px;
   background-color: white;
   padding: 1% 1.2% 1% 1%;
@@ -959,7 +1215,7 @@ h2.widget-title {
     width: 15em;
     display: inline;
     border: 10px solid white;
-    box-shadow: 0px 2px 10px -1px silver;
+    box-shadow: 0px 2px 10px -1px #dadade;
   }
   p{
     margin: 2%;
@@ -985,7 +1241,7 @@ h2.widget-title {
   z-index: 99;
   color: #9c5176;
   // @include when-xs {
-  //   border-bottom: 1px solid silver !important;
+  //   border-bottom: 1px solid #dadade !important;
   // }
 
 }
@@ -998,20 +1254,43 @@ h2.widget-title {
 .tabsBox {
   margin-top: 100px;
   display: flex;
-    @include when-xs {
-      display: block;
-    }
+  @include when-xs {
+    display: block;
+    margin-top: 50px;
+  }
+  // @include when-sm {
+  //   display: block;
+  // }
+  // @include when-md {
+  //   display: block;
+  // }
+  // @include when-lg {
+  //   display: block;
+  // }
+
 }
 // .borderLeft2 {
 //   margin-top: 0;
 // }
 .article_box2 {
-  margin-top: 2%;
-  margin-bottom: 4%;
+  margin-top: 2em;
+  margin-bottom: 4em;
+  @include when-xs {
+    margin-top: 4em;
+  }
+  @include when-sm {
+    margin-top: 3em;
+  }
 }
 .titleOferta {
+  @include when-xs {
+    padding-left: 15px;
+  }
+  @include when-sm {
+    padding-left: 15px;
+  }
   article {
-    margin-top: 5%;
+    // margin-top: 5%;
   }
 }
 .entry-content>ol {
@@ -1032,7 +1311,7 @@ h2.widget-title {
   display: block;
   // color: inherit;
   // background-color: inherit;
-  border: 1px solid silver;
+  border: 1px solid #dadade;
   text-align: left;
   font-size: 1em;
   margin: 0 auto;
@@ -1042,16 +1321,28 @@ h2.widget-title {
   margin-bottom: 0.5%;
 }
 .arrowDown::after {
-  content: 'â†“';
+  content: '↓';
   float: right;
   padding-right: 23px;
   margin-top: -3px;
+  @include when-xs {
+    padding-right:0;
+  }
+  @include when-sm {
+    padding-right:0;
+  }
 }
 .arrowUp::after {
-  content: 'â†‘';
+  content: '↑';
   float: right;
   padding-right: 23px;
   margin-top: -3px;
+  @include when-xs {
+    padding-right:0;
+  }
+  @include when-sm {
+    padding-right:0;
+  }
 }
 .acordionBox:hover {
   background-color:#9c5176;
@@ -1072,15 +1363,50 @@ h2.widget-title {
 .titleOferta {
   padding-right: 1%;
 }
-
+.toggleBox{
+  .entry-content {
+    padding-left: 0;
+  }
+}
 .entry-content>ol {
   padding: 2%;
 }
 //***** KONTAKT FORM *****//
+.kontakt2boxy p{
+  @include when-xs {
+  float: right;
+}
+}
+.kontakt3boxy {
+  // padding: 3% 0 3% 3%;
+  @include when-xs {
+    padding-left: 0;
+  }
+  @include when-sm {
+    padding: 3% 0 3% 0;
+  }
+  @include when-md {
+    padding: 3% 0 3% 0;
+  }
+  @include when-lg {
+    padding: 3% 0 3% 0;
+  }
+}
 
-.kontakt3boxy,
 .kontakt2boxy {
-  padding: 3%;
+  padding: 3% 0 3% 3%;
+  @include when-xs {
+    padding-left: 0;
+  }
+  @include when-sm {
+    padding: 3% 0 3% 0;
+  }
+  @include when-md {
+    padding: 3% 0 3% 3%;
+  }
+  @include when-lg {
+    padding: 3% 0 3% 3%;
+  }
 }
 form {
   display: flex;
@@ -1089,26 +1415,35 @@ form {
 }
 input {
   height: 44px;
-  border: 1px solid silver;
+  border: 1px solid #dadade;
   padding: 2%;
   margin-top: 1%;
-  @include when-xs {
-    width: 352.06px;
-  }
+  // @include when-xs {
+  //   width: 352.06px;
+  // }
 }
 textarea {
-  border: 1px solid silver;
+  border: 1px solid #dadade;
   padding: 2%;
   margin-top: 1%;
   height: 100%;
 }
+.contactHeight {
+  @include when-lg {
+    height: 245px;
+  }
+}
 input[type=submit] {
-  padding: 0.5em;
+  padding: 3%;
   font-size: 1em;
   background-color: #9c5176;
   color: #fff;
   -webkit-border-radius: 5px;
   border-radius: 5px;
+}
+.wpcf7-not-valid-tip {
+  color: green;
+  display: block!important;
 }
 .linkMail {
   background-color: #F6F6F6 !important;
@@ -1118,10 +1453,25 @@ input[type=submit] {
   }
 }
 
-.div.wpcf7-validation-errors {
+.wpcf7-validation-errors {
   display: flex !important;
+  border: 2px solid red !important;
 }
 
 .mapBox iframe{
-  margin-top: 0!important;
+  margin-top: 0;
+  border: 10px solid white!important;
+  @include when-xs {
+    margin-top: 15px;
+}
+@include when-sm {
+  margin-top: 15px;
+} }
+
+//***** blad_site ***** //
+.blad_site {
+  @include when-xs {
+    margin-top: 50px;
+    margin-left: 15px;
+  }
 }

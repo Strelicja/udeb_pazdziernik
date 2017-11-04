@@ -19,7 +19,7 @@
         <link rel="profile" href="http://gmpg.org/xfn/11">
         <!-- <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css"> -->
         <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js'></script>
-
+        <link href="/wp-content/themes/udeb_pazdziernik/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
         <?php wp_head(); ?>
         <!-- Global Site Tag (gtag.js) - Google Analytics -->
 <!-- <script async src=“https://www.googletagmanager.com/gtag/js?id=UA-106776295-1“></script>
@@ -32,12 +32,16 @@ gtag(‘js’, new Date()); gtag(‘config’, ‘UA-106776295-1’);
 
     <body <?php body_class(); ?>>
       <div class="borderHeader container-fluid ">
+        <div class="borderHeader2 container-fluid ">
 
-
+        </div>
         <div id="page" class="site container-fluid main_width">
             <div class="row">
 <!--header_box-->
-            <header id="masthead" class="site-header         site_box">
+            <header id="masthead" class="site-header  site_box">
+              <div class="site-branding main_width col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+              </div>
       <!-- site-branding -->
                 <div class="site-branding main_width col-lg-12 col-md-12 col-sm-12 col-xs-12">
            <!-- logo -->
@@ -70,7 +74,7 @@ gtag(‘js’, new Date()); gtag(‘config’, ‘UA-106776295-1’);
                           <span class="menu-togfgle"></span>
                           <span class="menu-togglfe"></span>
                           <span class="menu-toggfle"></span>
-                          <button class="buttonHam menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+                          <button class="btn buttonHam menu-toggle" aria-controls="primary-menu" aria-expanded="false">
 
                             <?php esc_html_e( '', 'udeb_pazdziernik' ); ?></button>
                         </div>
@@ -94,17 +98,9 @@ gtag(‘js’, new Date()); gtag(‘config’, ‘UA-106776295-1’);
         </div>
 
       </div>
-<<<<<<< HEAD
         </div>
         <!-- <div class="borderHeader container-fluid">
 
         </div> -->
         </div>
             <div id="content" class=" site-content main_width container-fluid">
-=======
-    </div>
-    <div class="borderHeader container-fluid">
-
-    </div>
-    <div id="content" class="site-content main_width container-fluid">
->>>>>>> e390b1d5863b5822ebdb789a2cb47188cc10e5d5

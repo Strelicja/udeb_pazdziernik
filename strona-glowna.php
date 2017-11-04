@@ -78,11 +78,10 @@
                 </div>
       <!--mapa-->
                 <div class="sidebar_contact  mapBox col-lg-5 col-md-5 col-sm-5 col-xs-12">
-                		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2440.5114194664297!2d4.83986651610137!3d52.28857147977109!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c5e02359790171%3A0x9da5dade12323784!2sBinderij+3P%2C+1185+ZH+Amstelveen%2C+Holandia!5e0!3m2!1spl!2spl!4v1506172580454" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-                </div>
+                		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d39048.18271146291!2d4.807036279367767!3d52.28857147977106!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c5e0235e553b17%3A0x66d95d6be7d9bae!2sUDEB+Administratiekantoor+B.V.!5e0!3m2!1spl!2spl!4v1509742614855" width="100%" height="310" frameborder="0" style="border:0" allowfullscreen></iframe></div>
               </div>
       <!--adress-->
-              <div class="sidebar_contact widget_text_adres col-lg-4 col-md-4 col-sm-4 col-xs-12">
+              <div class="sidebar_contact hidden-xs widget_text_adres col-lg-4 col-md-4 col-sm-4 col-xs-12">
                 <div class="borderLeft">
 
                <?php dynamic_sidebar('contact'); ?>

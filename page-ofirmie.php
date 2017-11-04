@@ -7,22 +7,24 @@
  *
  * @package Udeb
  */
-
 get_header(); ?>
 
 	<div id="primary" class="content-area ">
 		<main id="main" class="site-main">
-			<div class="row timeOpenBox ">
+			<div class="row timeOpenBox">
 
 				<div class="">
 		<!-- o firmie-->
-					<div class="tabsBox  col-lg-12 col-md-12 col-sm-12 col-xs-12 sidebar_aboute ">
+					<div class="tabsBox col-lg-12 col-md-12 col-sm-12 col-xs-12 sidebar_aboute ">
 							<?php
 								$wpb_all_query = new WP_Query(array(
 									'post_type'=>'post',
 									'post_status'=>'publish',
-									'cat' => '11',
-									'posts_per_page'=>99
+									'cat' => '6',
+									'order' => 'ASC',
+									'posts_per_page'=>99,
+									'post_status' => 'publish',
+									'suppress_filters' => true
 								));
 							?>
 							<?php if ( $wpb_all_query->have_posts() ) : ?>
@@ -48,7 +50,6 @@ get_header(); ?>
 										<!-- end of the loop -->
 								</div>
 							</div>
-<<<<<<< HEAD
 							<!--mobile-->
 
 						<div class="tabsList  visible-xs">
@@ -67,31 +68,9 @@ get_header(); ?>
 
 						</div>
 							    <?php wp_reset_postdata(); ?>
-=======
->>>>>>> e390b1d5863b5822ebdb789a2cb47188cc10e5d5
 
-              <!--mobile-->
-
-              <div class="tabsList  visible-xs">
-								<div class="tabsList col-lg-12 col-md-12 col-sm-12 col-xs-12">
-									<ul>
-										<?php while ( $wpb_all_query->have_posts() ) : $wpb_all_query->the_post();?>
-												<li class="tabsListTitle"><?php the_title(); ?></li>
-                        <div class="tabsListContent">
-  												<p class="tabsImg"><?php  the_post_thumbnail('thumbnail');?></p>
-  												<div class="tabsContent"><?php the_content(); ?></div>
-                        </div>
-										<?php endwhile; ?>
-									</ul>
-										<!-- end of the loop -->
-								</div>
-
-							</div>
-
-
-							    <?php wp_reset_postdata(); ?>
 							<?php else : ?>
-
+							    <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
 							<?php endif; ?>
 						</div>
 					</div>
@@ -108,12 +87,11 @@ get_header(); ?>
 							if ( comments_open() || get_comments_number() ) :
 								comments_template();
 							endif;
-
 						endwhile; // End of the loop.
 						?>
 					</div>
 		<!--adress-->
-					<div class="sidebar_contact widget_text_adres col-lg-4 col-md-4 col-sm-4 col-xs-12">
+					<div class="hidden-xs hiddenEl sidebar_contact widget_text_adres col-lg-4 col-md-4 col-sm-4 col-xs-12">
 						<div class="borderLeft borderLeft2">
 					 <?php dynamic_sidebar('contact'); ?>
 					 <p class="button_homepage">
@@ -127,5 +105,4 @@ get_header(); ?>
 	</div><!-- #primary -->
 
 <?php
-
 get_footer();
